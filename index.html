@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonathan Kong</title>
+<meta name="description" content="Jonathan Kong - computer science student at Northwestern and software engineer. Selected work, experience, and contact.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+<header class="site-header">
+  <h1>Jonathan Kong</h1>
+  <p class="intro">I'm a computer science student at Northwestern. I've shipped production features at Abridge, AVEVA, and WristBuddy.</p>
+  <nav class="site-nav" aria-label="Page sections">
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="work" aria-labelledby="work-heading">
+  <h2 id="work-heading">Selected work</h2>
+  <p class="work-note">Source for these projects is private; ask me about any of them.</p>
+
+  <article class="project">
+    <h3>Burner</h3>
+    <p>An AI life sim styled as a second iPhone. AI characters text first, leave you on read, post, call, and remember; events continue while you're offline.</p>
+      </article>
+
+  <article class="project">
+    <h3>chartside</h3>
+    <p>An ambient clinical scribe. It listens to a patient visit and drafts a note the clinician can edit before signing, with DAP and SOAP templates, and links each statement back to the transcript passage it came from.</p>
+  </article>
+
+  <article class="project">
+    <h3>engram</h3>
+    <p>A memory tool for my AI coding sessions. It records context as I work, so it survives between sessions instead of resetting every time.</p>
+  </article>
+
+  <div class="other-projects">
+    <h3>Other projects</h3>
+    <ul>
+      <li><strong>sessionside</strong> - turns school therapy notes into Medicaid claims.</li>
+      <li><strong>sidebet</strong> - play-money prediction markets with friends.</li>
+      <li><strong>cooked</strong> - live 1v1 hot-take debates.</li>
+      <li><strong>persona-onboarding</strong> - a voice-based onboarding flow.</li>
+      <li><strong>vigil</strong> - a small uptime monitor in Go that watches my services.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="experience-heading">
+  <h2 id="experience-heading">Experience</h2>
+
+  <article class="job">
+    <div class="job-head">
+      <h3>Abridge</h3>
+      <p class="job-role">Member of Technical Staff, Intern</p>
+      <p class="job-meta">Jun. 2026 &ndash; Sep. 2026 &middot; San Francisco, CA</p>
+    </div>
+    <ul>
+      <li>Built Query Engine, a Temporal RAG pipeline that flags gaps in AI-drafted notes against EHR history before signing, with a LangSmith eval harness gating prompt changes; 73% clinician acceptance.</li>
+      <li>Developed Level of Service, a deterministic TypeScript layer that converts LLM-generated diagnosis data into billing codes surfaced in the note UI, automating billing decisions for 70% of encounters.</li>
+      <li>Cut median diagnosis-search lookup time from 19s to 7s across 300K monthly searches by combining IMO's semantic-ranking API with org-specific popularity signals modeled from Postgres and Amplitude data.</li>
+    </ul>
+    <p class="job-note">All three features shipped to production on GKE behind LaunchDarkly flags and Argo Rollouts, ramping to 30,000+ clinicians.</p>
+  </article>
+
+  <article class="job">
+    <div class="job-head">
+      <h3>AVEVA</h3>
+      <p class="job-role">Software Developer Intern</p>
+      <p class="job-meta">Jun. 2025 &ndash; Sep. 2025 &middot; San Leandro, CA</p>
+    </div>
+    <ul>
+      <li>Redesigned two Azure DevOps CI/CD pipelines as modular YAML workflows with stage dependencies and parallel execution, shortening validation cycles by 45%+ and reducing cloud costs by 30%.</li>
+      <li>Replaced legacy steam table functions in PI Server's core computation engine with a standards-compliant IF97 C++ API, preserving compatibility across 14 production call sites.</li>
+      <li>Containerized a SQL-based data validation and ingestion workflow with Docker, cutting setup time for database-driven test suites by 70%.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head">
+      <h3>WristBuddy</h3>
+      <p class="job-role">Software Engineer Intern</p>
+      <p class="job-meta">Jun. 2024 &ndash; Sep. 2024 &middot; Chicago, IL</p>
+    </div>
+    <ul>
+      <li>Engineered a real-time healthcare analytics platform with Redis queues and asynchronous Node.js workers, processing 50K+ patient records and streaming risk indicators to three clinical partners over WebSockets.</li>
+      <li>Designed layered API security for 25+ endpoints serving sensitive healthcare data using OAuth 2.0, network isolation, and least-privilege permissions.</li>
+    </ul>
+  </article>
+
+  <article class="job">
+    <div class="job-head">
+      <h3>Transport Lab, Northwestern</h3>
+      <p class="job-role">Software Engineer Intern</p>
+      <p class="job-meta">Mar. 2024 &ndash; Jun. 2024 &middot; Evanston, IL</p>
+    </div>
+    <ul>
+      <li>Migrated a legacy document-analysis platform for social computing research to a serverless, event-driven architecture on API Gateway and AWS Lambda, reducing job turnaround time by 70%.</li>
+      <li>Implemented stateless token-based authentication and decoupled client-facing APIs from backend analysis workers, keeping response times under 2.5s during concurrent uploads.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="education" aria-labelledby="education-heading">
+  <h2 id="education-heading">Education</h2>
+  <p><strong>Northwestern University</strong> - Computer Science. Planned B.S./M.S. completion: June 2028.</p>
+  <p class="coursework">Coursework: Data Structures and Algorithms, Design and Analysis of Algorithms, Database Systems, Networking, Operating Systems, Computer Security, Object-Oriented Design, Scalable Software Architectures, Software Prototyping.</p>
+</section>
+
+<section id="contact" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Contact</h2>
+  <ul class="contact-list">
+    <li>Email: <a href="mailto:jonathankong677@gmail.com">jonathankong677@gmail.com</a></li>
+    <li>GitHub: <a href="https://github.com/jkong7">github.com/jkong7</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/jonathankong1">linkedin.com/in/jonathankong1</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Plain HTML and CSS. No framework, no JavaScript.</p>
+</footer>
+
+</div>
+</body>
+</html>
