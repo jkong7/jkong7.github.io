@@ -93,7 +93,11 @@ section {
 .work-note {
   color: var(--muted);
   font-size: 0.92rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.project:first-of-type {
+  padding-top: 0;
 }
 
 .project {
@@ -153,14 +157,6 @@ li {
 .contact-list {
   list-style: none;
   padding-left: 0;
-}
-
-.site-footer {
-  border-top: 1px solid var(--rule);
-  max-width: 68ch;
-  padding-top: 1rem;
-  color: var(--muted);
-  font-size: 0.88rem;
 }
 
 @media (max-width: 480px) {
