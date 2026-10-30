@@ -25,7 +25,7 @@
 
 <section id="work" aria-labelledby="work-heading">
   <h2 id="work-heading">Selected work</h2>
-  <p class="work-note">Source for these projects is private; ask me about any of them.</p>
+  <p class="work-note">Project source is private.</p>
 
   <article class="project">
     <h3>Burner</h3>
@@ -34,7 +34,7 @@
 
   <article class="project">
     <h3>chartside</h3>
-    <p>An ambient clinical scribe. It listens to a patient visit and drafts a note the clinician can edit before signing, with DAP and SOAP templates, and links each statement back to the transcript passage it came from.</p>
+    <p>An ambient clinical scribe. It listens to a patient visit and drafts a note the clinician can edit before signing, with DAP and SOAP templates, and links draft statements back to the transcript passages they came from.</p>
   </article>
 
   <article class="project">
@@ -66,7 +66,7 @@
     <ul>
       <li>Built Query Engine, a Temporal RAG pipeline that flags gaps in AI-drafted notes against EHR history before signing, with a LangSmith eval harness gating prompt changes; 73% clinician acceptance.</li>
       <li>Developed Level of Service, a deterministic TypeScript layer that converts LLM-generated diagnosis data into billing codes surfaced in the note UI, automating billing decisions for 70% of encounters.</li>
-      <li>Cut median diagnosis-search lookup time from 19s to 7s across 300K monthly searches by combining IMO's semantic-ranking API with org-specific popularity signals modeled from Postgres and Amplitude data.</li>
+      <li>Cut median diagnosis-search lookup time from 19s to 7s across 300K monthly searches by combining IMO's semantic-ranking API with org-specific popularity signals.</li>
     </ul>
     <p class="job-note">All three features shipped to production on GKE behind LaunchDarkly flags and Argo Rollouts, ramping to 30,000+ clinicians.</p>
   </article>
@@ -125,10 +125,6 @@
 </section>
 
 </main>
-
-<footer class="site-footer">
-  <p>Plain HTML and CSS. No framework, no JavaScript.</p>
-</footer>
 
 </div>
 </body>
