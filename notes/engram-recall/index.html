@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keeping engram recall within a token budget</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f5c3f'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23f5f2ec' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page article">
+<div class="top"><a href="/notes/">Notes</a></div>
+<main>
+<header>
+  <h1>Keeping engram recall within a token budget</h1>
+</header>
+<p class="article-intro">I built engram as durable personal memory for my AI coding sessions. It uses one local SQLite store. Hooks and an MCP server make it work across multiple agent harnesses. I put separate limits on what enters a session automatically and what recall can return during a prompt.</p>
+<section>
+  <h2>Two limits</h2>
+  <p>At session start, engram injects a digest capped at 1,500 tokens. That is the automatic context budget. Gated recall can return at most five items and 700 tokens per prompt. The same memory never returns twice in one session.</p>
+  <p>Those limits bound what engram injects through each path. The digest cannot keep growing past its cap as the store grows. Each recall response has both an item limit and a token limit. I keep those limits separate from the durable store itself.</p>
+</section>
+<section>
+  <h2>What happens to stored memories</h2>
+  <p>Near-duplicates merge. When a memory contradicts an earlier one, it supersedes it with a validity window. Unused memories decay. Those rules govern the stored memories alongside the limits on what recall returns.</p>
+  <p>Machine edits to my own statements wait in an inbox for approval. Secrets are redacted at write, and injection attempts are quarantined. An automatic edit to something I said therefore has an approval step before it becomes part of that record.</p>
+</section>
+<section>
+  <h2>A bounded interface to a durable store</h2>
+  <p>The SQLite store runs in WAL mode. Operations are append-only and undoable. Daily backups sit alongside a Markdown mirror in git. These are the persistence mechanisms behind the memory that sessions can retrieve.</p>
+  <p>The numbers describe the interface I implemented: a capped digest, a capped recall response, and no repeated memory within a session. They do not measure whether a retrieved memory was useful. This note describes those limits without claiming a recall-quality result.</p>
+</section>
+</main>
+<footer><a href="/">Home</a></footer>
+</div>
+</body>
+</html>
