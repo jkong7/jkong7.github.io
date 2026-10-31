@@ -5,142 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jonathan Kong</title>
 <meta name="description" content="Jonathan Kong - computer science at Northwestern. Software engineer. Selected work, experience, and contact.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f5c3f'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23f5f2ec' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page">
+<div class="top">
+  <span>jkong7</span>
+  <span><a href="#work">Work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></span>
+</div>
 
-<header class="site-header">
-  <nav class="site-nav" aria-label="Page sections">
-    <span class="nav-name">Jonathan Kong</span>
-    <span class="nav-links">
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </span>
-  </nav>
-
-  <h1>Jonathan Kong</h1>
-  <p class="intro">I&rsquo;m Jonny. I study computer science at Northwestern and build software people actually use. Last summer I was at Abridge, where three of my features shipped to production for 30,000+ clinicians. Before that, AVEVA and WristBuddy. Right now I&rsquo;m building <a href="#burner">Burner</a>, an AI life sim for the iPhone.</p>
-  <p class="now"><span class="now-label">Now</span> Finishing my B.S. at Northwestern, building Burner, and recruiting for new-grad SWE roles. Bay Area native, currently in Evanston. Off the clock: fantasy football and Fake Mink on repeat.</p>
+<header>
+  <h1>Jonathan Kong builds software that <span class="hl">ships to real users</span>.</h1>
+  <p class="kicker"><b>Now</b>&nbsp;&nbsp;CS at Northwestern &middot; Finishing my B.S. &middot; Building <a href="#burner">Burner</a> &middot; Recruiting for new-grad SWE roles &middot; Bay Area native in Evanston &middot; Off the clock: fantasy football</p>
 </header>
 
 <main>
+<section id="work">
+  <h2>Selected work</h2>
+  <p class="sub">Everything here is on GitHub except Burner, whose source is private. Ask me about it.</p>
 
-<section id="work" aria-labelledby="work-heading">
-  <h2 id="work-heading"><span class="sec-num">01</span>Selected work</h2>
-  <p class="work-note">Project source is private; ask me about any of these.</p>
-
-  <article class="project" id="burner">
+  <div class="pitem" id="burner">
     <h3>Burner</h3>
-    <p class="project-line">An AI life sim styled as a second iPhone. AI characters text first, leave you on read, post, call, and remember - and their lives keep moving while you&rsquo;re offline.</p>
-    <p class="project-detail">The hard part isn&rsquo;t the models, it&rsquo;s the world clock: events run on a server-side schedule, so the sim doesn&rsquo;t pause when you close the app.</p>
-  </article>
-
-  <article class="project">
-    <h3>chartside</h3>
-    <p class="project-line">An ambient clinical scribe. It listens to a patient visit and drafts a note the clinician can edit before signing, with DAP and SOAP templates.</p>
-    <p class="project-detail">The trust mechanism is citation: every drafted statement links back to the transcript passage it came from.</p>
-  </article>
-
-  <article class="project">
-    <h3>engram</h3>
-    <p class="project-line">A memory tool for my own AI coding sessions. It records context as I work, so the next session starts where the last one ended instead of from zero.</p>
-  </article>
-
-  <div class="other-projects">
-    <h3>Other projects</h3>
-    <ul>
-      <li><strong>sessionside</strong> - turns school therapy notes into Medicaid claims.</li>
-      <li><strong>sidebet</strong> - play-money prediction markets with friends.</li>
-      <li><strong>cooked</strong> - live 1v1 hot-take debates.</li>
-      <li><strong>persona-onboarding</strong> - a voice-based onboarding flow.</li>
-      <li><strong>vigil</strong> - a small uptime monitor in Go that watches my services.</li>
-    </ul>
+    <div>
+      <p class="what">An AI life sim styled as a second iPhone. AI characters text first, leave you on read, post, call, and remember - and their lives keep moving while you're offline.</p>
+      <p class="why">The hard part isn't the models, it's the world clock: events run on a server-side schedule, so the sim doesn't pause when you close the app.</p>
+    </div>
   </div>
+  <div class="pitem">
+    <h3><a href="https://github.com/jkong7/chartside">chartside<span class="arrow">&nearr;</span></a></h3>
+    <div>
+      <p class="what">An ambient clinical scribe. It listens to a patient visit and drafts a note the clinician can edit before signing, with DAP and SOAP templates.</p>
+      <p class="why">The trust mechanism is citation: every drafted statement links back to the transcript passage it came from.</p>
+    </div>
+  </div>
+  <div class="pitem">
+    <h3><a href="https://github.com/jkong7/engram">engram<span class="arrow">&nearr;</span></a></h3>
+    <div>
+      <p class="what">A memory tool for my own AI coding sessions. It records context as I work, so the next session starts where the last one ended instead of from zero.</p>
+    </div>
+  </div>
+  <p class="others">Also: <a href="https://github.com/jkong7/sessionside">sessionside</a> &middot; <a href="https://github.com/jkong7/sidebet">sidebet</a> &middot; <a href="https://github.com/jkong7/cooked">cooked</a> &middot; <a href="https://github.com/jkong7/persona-onboarding">persona-onboarding</a> &middot; <a href="https://github.com/jkong7/vigil">vigil</a></p>
 </section>
 
-<section id="experience" aria-labelledby="experience-heading">
-  <h2 id="experience-heading"><span class="sec-num">02</span>Experience</h2>
+<section id="experience">
+  <h2>Experience</h2>
+  <p class="sub">Three of my features shipped to production at Abridge, ramping to 30,000+ clinicians.</p>
 
-  <article class="job">
-    <div class="job-head">
-      <div>
-        <h3>Abridge</h3>
-        <p class="job-role">Member of Technical Staff, Intern</p>
-      </div>
-      <p class="job-meta">Jun. 2026 &ndash; Sep. 2026<br>San Francisco, CA</p>
-    </div>
+  <div class="job">
+    <div class="job-head"><h3>Abridge <span>&middot; Member of Technical Staff, Intern</span></h3><span class="dates">Jun - Sep 2026, San Francisco</span></div>
     <ul>
       <li>Built Query Engine, a Temporal RAG pipeline that flags gaps in AI-drafted notes against EHR history before signing, with a LangSmith eval harness gating prompt changes; 73% clinician acceptance.</li>
       <li>Developed Level of Service, a deterministic TypeScript layer that converts LLM-generated diagnosis data into billing codes surfaced in the note UI, automating billing decisions for 70% of encounters.</li>
       <li>Cut median diagnosis-search lookup time from 19s to 7s across 300K monthly searches by combining IMO's semantic-ranking API with org-specific popularity signals.</li>
     </ul>
-    <p class="job-note">All three features shipped to production on GKE behind LaunchDarkly flags and Argo Rollouts, ramping to 30,000+ clinicians.</p>
-  </article>
-
-  <article class="job">
-    <div class="job-head">
-      <div>
-        <h3>AVEVA</h3>
-        <p class="job-role">Software Developer Intern</p>
-      </div>
-      <p class="job-meta">Jun. 2025 &ndash; Sep. 2025<br>San Leandro, CA</p>
-    </div>
+    <p class="note">All three features shipped to production on GKE behind LaunchDarkly flags and Argo Rollouts, ramping to 30,000+ clinicians.</p>
+  </div>
+  <div class="job">
+    <div class="job-head"><h3>AVEVA <span>&middot; Software Developer Intern</span></h3><span class="dates">Jun - Sep 2025, San Leandro</span></div>
     <ul>
       <li>Redesigned two Azure DevOps CI/CD pipelines as modular YAML workflows with stage dependencies and parallel execution, shortening validation cycles by 45%+ and reducing cloud costs by 30%.</li>
       <li>Replaced legacy steam table functions in PI Server's core computation engine with a standards-compliant IF97 C++ API, preserving compatibility across 14 production call sites.</li>
       <li>Containerized a SQL-based data validation and ingestion workflow with Docker, cutting setup time for database-driven test suites by 70%.</li>
     </ul>
-  </article>
-
-  <article class="job">
-    <div class="job-head">
-      <div>
-        <h3>WristBuddy</h3>
-        <p class="job-role">Software Engineer Intern</p>
-      </div>
-      <p class="job-meta">Jun. 2024 &ndash; Sep. 2024<br>Chicago, IL</p>
-    </div>
+  </div>
+  <div class="job">
+    <div class="job-head"><h3>WristBuddy <span>&middot; Software Engineer Intern</span></h3><span class="dates">Jun - Sep 2024, Chicago</span></div>
     <ul>
       <li>Engineered a real-time healthcare analytics platform with Redis queues and asynchronous Node.js workers, processing 50K+ patient records and streaming risk indicators to three clinical partners over WebSockets.</li>
       <li>Designed layered API security for 25+ endpoints serving sensitive healthcare data using OAuth 2.0, network isolation, and least-privilege permissions.</li>
     </ul>
-  </article>
-
-  <article class="job">
-    <div class="job-head">
-      <div>
-        <h3>Transport Lab, Northwestern</h3>
-        <p class="job-role">Software Engineer Intern</p>
-      </div>
-      <p class="job-meta">Mar. 2024 &ndash; Jun. 2024<br>Evanston, IL</p>
-    </div>
+  </div>
+  <div class="job">
+    <div class="job-head"><h3>Transport Lab, Northwestern <span>&middot; Software Engineer Intern</span></h3><span class="dates">Mar - Jun 2024, Evanston</span></div>
     <ul>
       <li>Migrated a legacy document-analysis platform for social computing research to a serverless, event-driven architecture on API Gateway and AWS Lambda, reducing job turnaround time by 70%.</li>
       <li>Implemented stateless token-based authentication and decoupled client-facing APIs from backend analysis workers, keeping response times under 2.5s during concurrent uploads.</li>
     </ul>
-  </article>
+  </div>
 </section>
 
-<section id="education" aria-labelledby="education-heading">
-  <h2 id="education-heading"><span class="sec-num">03</span>Education</h2>
-  <p><strong>Northwestern University</strong> - Computer Science. Planned B.S./M.S. completion: June 2028.</p>
-  <p class="coursework">Coursework: Data Structures and Algorithms, Design and Analysis of Algorithms, Database Systems, Networking, Operating Systems, Computer Security, Object-Oriented Design, Scalable Software Architectures, Software Prototyping.</p>
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu">
+    <p><strong>Northwestern University</strong> - Computer Science. Planned B.S./M.S. completion: June 2028.</p>
+    <p class="note">Coursework: Data Structures and Algorithms, Design and Analysis of Algorithms, Database Systems, Networking, Operating Systems, Computer Security, Object-Oriented Design, Scalable Software Architectures, Software Prototyping.</p>
+  </div>
 </section>
 
-<section id="contact" aria-labelledby="contact-heading">
-  <h2 id="contact-heading"><span class="sec-num">04</span>Contact</h2>
+<section id="contact">
+  <h2>Contact</h2>
   <ul class="contact-list">
-    <li>Email: <a href="mailto:jonathankong677@gmail.com">jonathankong677@gmail.com</a></li>
-    <li>GitHub: <a href="https://github.com/jkong7">github.com/jkong7</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/jonathankong1">linkedin.com/in/jonathankong1</a></li>
+    <li><a href="mailto:jonathankong677@gmail.com">jonathankong677@gmail.com</a></li>
+    <li><a href="https://github.com/jkong7">github.com/jkong7</a></li>
+    <li><a href="https://www.linkedin.com/in/jonathankong1">linkedin.com/in/jonathankong1</a></li>
   </ul>
 </section>
-
 </main>
 
+<footer>
+  <p>&copy; 2026 Jonathan Kong</p>
+</footer>
 </div>
 </body>
 </html>
