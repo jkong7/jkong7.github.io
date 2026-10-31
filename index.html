@@ -12,7 +12,7 @@
 <div class="page">
 <div class="top">
   <span>jkong7</span>
-  <span><a href="#work">Work</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></span>
+  <span><a href="#work">Work</a><a href="#experience">Experience</a><a href="/notes/">Notes</a><a href="#education">Education</a><a href="#contact">Contact</a></span>
 </div>
 
 <header>
@@ -23,29 +23,75 @@
 <main>
 <section id="work">
   <h2>Selected work</h2>
-  <p class="sub">Everything here is on GitHub except Burner, whose source is private. Ask me about it.</p>
-
   <div class="pitem" id="burner">
     <h3>Burner</h3>
     <div>
-      <p class="what">An AI life sim styled as a second iPhone. AI characters text first, leave you on read, post, call, and remember - and their lives keep moving while you're offline.</p>
-      <p class="why">The hard part isn't the models, it's the world clock: events run on a server-side schedule, so the sim doesn't pause when you close the app.</p>
+      <p class="what">I built a simulated second life inside an iPhone, with characters who text first and a world that keeps moving while I am away.</p>
+      <p class="why">Source private.</p>
+      <p class="destinations"><a href="/work/burner/">Writeup</a></p>
     </div>
   </div>
   <div class="pitem">
-    <h3><a href="https://github.com/jkong7/chartside">chartside<span class="arrow">&nearr;</span></a></h3>
+    <h3>chartside</h3>
     <div>
-      <p class="what">An ambient clinical scribe. It listens to a patient visit and drafts a note the clinician can edit before signing, with DAP and SOAP templates.</p>
-      <p class="why">The trust mechanism is citation: every drafted statement links back to the transcript passage it came from.</p>
+      <p class="what">I built a clinical scribe that drafts notes from a live visit and links every drafted statement to its transcript passage.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/chartside">Source</a></p>
     </div>
   </div>
   <div class="pitem">
-    <h3><a href="https://github.com/jkong7/engram">engram<span class="arrow">&nearr;</span></a></h3>
+    <h3>engram</h3>
     <div>
-      <p class="what">A memory tool for my own AI coding sessions. It records context as I work, so the next session starts where the last one ended instead of from zero.</p>
+      <p class="what">I built durable personal memory for AI coding sessions, with a capped session digest and gated recall.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/engram">Source</a> &middot; <a href="/notes/engram-recall/">Note</a></p>
     </div>
   </div>
-  <p class="others">Also: <a href="https://github.com/jkong7/sessionside">sessionside</a> &middot; <a href="https://github.com/jkong7/sidebet">sidebet</a> &middot; <a href="https://github.com/jkong7/cooked">cooked</a> &middot; <a href="https://github.com/jkong7/persona-onboarding">persona-onboarding</a> &middot; <a href="https://github.com/jkong7/vigil">vigil</a></p>
+  <div class="other-projects">
+    <h3>Other projects</h3>
+    <ul>
+  <li class="other-project">
+    <h4>sessionside</h4>
+    <div>
+      <p class="what">I built a dictation workflow for school therapists that creates IEP-aligned notes and checks them against state school Medicaid rules. The clinician signs every note.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/sessionside">Source</a></p>
+    </div>
+  </li>
+  <li class="other-project">
+    <h4>sidebet</h4>
+    <div>
+      <p class="what">I built play-money prediction markets for a group chat, with instant bets and live odds.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/sidebet">Source</a></p>
+    </div>
+  </li>
+  <li class="other-project">
+    <h4>cooked</h4>
+    <div>
+      <p class="what">I built live one-on-one hot-take debates, with an AI opponent when no one joins within 12 seconds.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/cooked">Source</a></p>
+    </div>
+  </li>
+  <li class="other-project">
+    <h4>persona-onboarding</h4>
+    <div>
+      <p class="what">I built a first conversation with a personal assistant that continues by text if the browser call is declined, ends, or goes quiet.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/persona-onboarding">Source</a></p>
+    </div>
+  </li>
+  <li class="other-project">
+    <h4>vigil</h4>
+    <div>
+      <p class="what">I built a self-hosted uptime monitor in Go, with HTTP and TCP probes, SLO history, and a status page.</p>
+      <p class="why">Public source.</p>
+      <p class="destinations"><a href="https://github.com/jkong7/vigil">Source</a></p>
+    </div>
+  </li>
+    </ul>
+  </div>
 </section>
 
 <section id="experience">
@@ -85,6 +131,19 @@
   </div>
 </section>
 
+<section id="notes">
+  <h2>Notes</h2>
+  <div class="note-entry">
+    <h3><a href="/notes/engram-recall/">Keeping engram recall within a token budget</a></h3>
+    <p class="what">How I cap the session digest and prompted recall in my coding-session memory tool.</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="prose">I build software for healthcare workflows and my own AI coding sessions. At Abridge, I shipped features for clinical documentation and billing. At AVEVA, I worked on CI/CD and replaced steam table functions in PI Server’s core computation engine. I also worked on real-time healthcare analytics at WristBuddy and a serverless migration at Northwestern’s Transport Lab. My projects include chartside, a clinical scribe with transcript-linked draft notes, and engram, a personal memory tool for coding sessions. Burner is a simulated second life. Its source is private.</p>
+</section>
+
 <section id="education">
   <h2>Education</h2>
   <div class="edu">
@@ -104,6 +163,7 @@
 </main>
 
 <footer>
+  <p>I built this site with plain HTML and one shared stylesheet.</p>
   <p>&copy; 2026 Jonathan Kong</p>
 </footer>
 </div>
